@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIALEKTO</title>
+    <link rel="stylesheet" href="fontstyle.css">
+    <link rel="icon" type="image/jpg" href="ImageContent/logo.jpg">
+    <style>
+        .brand{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tagline{
+    font-size: 12px;
+    font-family: 'Avant Garde Book BT','Lucida Sans Unicode';
+    position: relative;
+    bottom: 12px;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 6px 15px;
+    color: black;
+    width: 200px; 
+    margin: 20px;
+}
+a:hover{
+    background: rgb(211, 175, 121);
+    color: white;
+    transition: 0.2s;
+    width: 200px;
+}
+a.active{
+    background: rgb(211, 175, 121);
+    color: white;
+}
+.fixedbox {
+    position: relative;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+button{
+    background-color: rgb(173, 171, 210);
+    font-size: 12px;
+    position: relative;
+    display:inline-block ;
+    padding: 10px 20px;
+    border: 0px;
+    border-radius: 18px;
+    cursor: pointer;
+    color: white;
+    margin: 5px;
+    top: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+    box-shadow: 1px 1px 2px rgb(182, 178, 178);
+}
+button:hover{
+    background-color: rgb(207, 213, 224);
+}
+dl dt{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(224, 204, 150);
+    color: rgb(255, 255, 255);
+    padding: 5px 4px;
+    width: 100px;
+    border-radius: 18px;
+    cursor: pointer;
+    width: 130px;
+}
+.imageset1 {
+    text-align: center;
+}
+.set1row1, .set1row2, .set1row3, .set1row4 {
+    display: flex;
+    justify-content: center;
+    gap: 110px; 
+}
+.container1 {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container1 img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 4px rgba(153, 153, 153);
+}
+.set1row1{
+    margin-top: 50px;
+}
+.itemname{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+    </style>
+</head>
+<body>
+    <center>
+        <img class="logo" src="ImageContent/logo.jpg" alt="logo" width="130px"> 
+        <h1 class="brand">D I A L E K T O</h1>
+        <p class="tagline">Crafted in the Philippines</p>
+        <div id="fixedBox" class="fixedbox">
+        <ul>
+            <li><a href="homepage.html">HOME</a></li>
+            <li><a href="productsclassictotebag.html" class="active">PRODUCTS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="index.html">MAIN</a></li>
+        </ul>
+        <hr>
+        </div>
+        <button id="category1" style="width: 130px;">Classic Tote Bag</button>
+        <button id="category2"  style="width: 145x;">Tote Bag with Print</button>
+        <button id="category3" style="width: 100px;" >Zip Bag</button>
+        <button id="category4" style="width: 100px;" >T-Shirt</button>
+        <button id="category5" style="width: 120px;" >Short Pants</button>
+    </center>
+    <div class="imageset">
+        <div class="imageset1">
+            <div class="set1row1">
+                <div class="container1">
+                    <p class="itemname">Army Green Zip Bag</p>
+                    <img src="ImageContent/ArmyGreenZip.jpg" alt="ArmyGreenZip" class="set1" width="250px">
+                        <dl>
+                            <dt>BUY<br>₱249.00</dt>
+                        </dl>
+                    </div>
+               <div class="container1">
+                <p class="itemname">Gray Zip Bag</p>
+                    <img src="ImageContent/GrayZip.jpg" alt="GrayZip" class="set1" width="250px">
+                        <dl>
+                            <dt>BUY<br>₱249.00</dt>
+                        </dl>
+                </div>
+        </div>
+            <div class="set1row2">
+              <div class="container1">
+                <p class="itemname">Black Zip Bag</p>
+                 <img src="ImageContent/BlackZip.jpg" alt="BlackZip" class="set1" width="250px">
+                    <dl>
+                        <dt>BUY<br>₱249.00</dt>
+                    </dl>
+             </div>
+             <div class="container1">
+                <p class="itemname">Mustard Zip Bag</p>
+                <img src="ImageContent/MustardZip.jpg" alt="MustardZip" class="set1" width="250px">
+                    <dl>
+                        <dt>BUY<br>₱249.00</dt>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("category1").onclick = function () {
+        location.href ="productsclassictotebag.html";
+        };
+
+        document.getElementById("category2").onclick = function () {
+        location.href ="productstotebag.html";
+        };
+
+        document.getElementById("category3").onclick = function () {
+        location.href ="productszipbag.html";
+        };
+
+        document.getElementById("category4").onclick = function () {
+        location.href ="productst-shirt.html";
+        };
+
+        document.getElementById("category5").onclick = function () {
+        location.href ="productsshortpants.html";
+        };
+
+        window.onscroll=function() {myFunction()};
+        var fixedBox=document.getElementById("fixedBox");
+        var sticky=fixedBox.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                fixedBox.classList.add("fixed");
+            } else {
+                fixedBox.classList.remove("fixed");
+            }
+        }
+    </script>
+</body>
+</html>

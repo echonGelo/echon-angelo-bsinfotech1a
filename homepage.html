@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIALEKTO</title>
+    <link rel="stylesheet" href="fontstyle.css">
+    <link rel="icon" type="image/jpg" href="ImageContent/logo.jpg">
+    <style>
+        .brand{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tagline{
+    font-size: 12px;
+    font-family: 'Avant Garde Book BT','Lucida Sans Unicode';
+    position: relative;
+    bottom: 12px;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    z-index: 3;
+}
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 6px 15px;
+    color: black;
+    width: 200px; 
+    margin: 20px;
+    z-index: 3;
+}
+a:hover{
+    background: rgb(211, 175, 121);
+    color: white;
+    transition: 0.2s;
+    width: 200px;
+    z-index: 3;
+    }
+    a.active{
+    background: rgb(211, 175, 121);
+    color: white;
+    }
+.fixedbox {
+    position: relative;
+    z-index: 2;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: white;
+}
+.content{
+    background-color: rgb(246, 240, 233);
+    
+}
+hr{
+    height: 1.5px;
+    background-color: rgb(145, 145, 145);
+    border: none;
+}
+.blur-background {
+    position: relative;
+}
+
+.blur-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ImageContent/backdrop.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); 
+    z-index: -1;
+}
+.button-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    bottom: 200px;
+}
+.button {
+    padding: 10px 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+.image-container {
+    z-index: 1;
+    position: relative;
+    bottom: 400px;
+    overflow: auto; 
+    border: 1px solid #fdfdfd; 
+    scrollbar-width: thick;
+    background-color: rgb(124, 120, 111);
+  }
+  .image-container {
+    height: 600px; 
+    width: 650px;
+    overflow: auto; 
+    border: 1px solid #ccc; 
+}
+.image-container img {
+    max-width: 100%; 
+    display: block; 
+    margin-bottom: 10px;
+}
+.userprofile{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.pfp{
+    border-radius: 50px;
+    position: relative;
+    top: -5px;
+}
+.username{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+}
+.location{
+    position: relative;
+    color: white;
+    top: 20px;
+    right: 83px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <center>
+        <img class="logo" src="ImageContent/logo.jpg" alt="logo" width="130px"> 
+        <h1 class="brand">D I A L E K T O</h1>
+        <p class="tagline">Crafted in the Philippines</p>
+        <div id="fixedBox" class="fixedbox">
+        <ul>
+            <li><a href="homepage.html" class="active">HOME</a></li>
+            <li><a href="productsclassictotebag.html">PRODUCTS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="index.html">MAIN</a></li>
+        </ul>
+        <hr>
+        </div>
+        
+        <div class="blur-background">
+            <div class="button-container">
+                <button id="viewproduct" class="button">View Products</button>
+            </div> 
+                <div class="image-container">
+                    <div class="image-container-inner">
+                        <div class="userprofile">
+                            <img class="pfp" src="ImageContent/pfp.jpg" alt="" width="45px">
+                            <div class="username">di.a.lek.to</div>
+                            <div class="location">Manila, Philippines</div>
+                        </div>
+                      <img class="post" src="ImageContent/KORTOroy.jpg" alt="Image 1" >
+                      <div class="userprofile">
+                        <img class="pfp" src="ImageContent/pfp.jpg" alt="" width="45px">
+                        <div class="username">di.a.lek.to</div>
+                        <div class="location">Manila, Philippines</div>
+                    </div>
+                      <img class="post" src="ImageContent/Colours.jpg" alt="Image 2" >
+                      <div class="userprofile">
+                        <img class="pfp" src="ImageContent/pfp.jpg" alt="" width="45px">
+                        <div class="username">di.a.lek.to</div>
+                        <div class="location">Manila, Philippines</div>
+                    </div>
+                      <img class="post" src="ImageContent/CrossBodyBag.jpg" alt="Image 3" >
+                    </div>
+                  </div>
+                
+        </div>
+    </center>
+    <script>
+        document.getElementById('viewproduct').onclick=function(){
+            location.href="productsclassictotebag.html";
+        }
+
+        window.onscroll=function() {myFunction()};
+        var fixedBox=document.getElementById("fixedBox");
+        var sticky=fixedBox.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                fixedBox.classList.add("fixed");
+            } else {
+                fixedBox.classList.remove("fixed");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIALEKTO</title>
+    <link rel="stylesheet" href="fontstyle.css">
+    <link rel="icon" type="image/jpg" href="ImageContent/logo.jpg">
+    <style>
+        .brand {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .tagline {
+            font-size: 12px;
+            font-family: 'Avant Garde Book BT','Lucida Sans Unicode';
+            position: relative;
+            bottom: 12px;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding: 6px 15px;
+            color: black;
+            width: 200px; 
+            margin: 20px;
+        }
+        a:hover{
+        background: rgb(211, 175, 121);
+        color: white;
+        transition: 0.2s;
+        width: 200px;
+        }
+        a.active{
+        background: rgb(211, 175, 121);
+        color: white;
+        }
+        .fixedbox {
+            position: relative;
+        }
+        .fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+        }
+        .content {
+            background-color: rgb(246, 240, 233);
+        }
+        hr {
+            height: 1.5px;
+            background-color: rgb(145, 145, 145);
+            border: none;
+        }
+        .blur-background {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .blur-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('ImageContent/backdrop.jpg'); 
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px); 
+            z-index: -1;
+        }
+        .contactus {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .blur-background div a{
+            color: white;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.509);
+            width: 140px;
+        }
+        .e-contact div{
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.509);
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <img class="logo" src="ImageContent/logo.jpg" alt="logo" width="130px"> 
+    <h1 class="brand">D I A L E K T O</h1>
+    <p class="tagline">Crafted in the Philippines</p>
+    <div id="fixedBox" class="fixedbox">
+        <ul>
+            <li><a href="homepage.html">HOME</a></li>
+            <li><a href="productsclassictotebag.html">PRODUCTS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html" class="active">CONTACT</a></li>
+            <li><a href="index.html">MAIN</a></li>
+        </ul>
+    </center>
+        <hr>
+    </div>
+    <div class="blur-background">
+        <div class="contactus">Contact Us</div>
+        <center>
+            <div class="type">DETAILS</div>
+            <div class="e-contact">
+                <div> Email: dialektopilipino@gmail.com </div>
+                <div> Mobile Number: 0906 004 8034</div>
+            </div>
+        </center>
+        <div class="type">DIRECT LINK</div>
+        <div class="contact details">
+            <div>
+                <a href="https://www.facebook.com/dialektoph" class="detail">Facebook: Dialekto</a>
+            </div>
+            <div>
+            <a href="https://www.instagram.com/di.a.lek.to/" class="detail">Instagram: di.a.lek.to</a>
+            </div>
+        </div>
+    <div class="type">ALSO AVAILABLE   </div>
+        <div class="contact details">
+            <div>
+                <a href="https://shp.ee/s7f1lpw?fbclid=IwAR2MNANnPVuo-mFl3cEU1MlSsX9eVhFDeBBBGyuSXwrtzM0QWUzR3f5Ev78" class="detail">Shopee: dialekto</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onscroll = function() { myFunction() };
+        var fixedBox = document.getElementById("fixedBox");
+        var sticky = fixedBox.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                fixedBox.classList.add("fixed");
+            } else {
+                fixedBox.classList.remove("fixed");
+            }
+        }
+    </script>
+</body>
+</html>

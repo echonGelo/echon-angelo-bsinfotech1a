@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIALEKTO</title>
+    <link rel="stylesheet" href="fontstyle.css">
+    <link rel="icon" type="image/jpg" href="ImageContent/logo.jpg">
+    <style>
+        .brand {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .tagline {
+            font-size: 12px;
+            font-family: 'Avant Garde Book BT','Lucida Sans Unicode';
+            position: relative;
+            bottom: 12px;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding: 6px 15px;
+            color: black;
+            width: 200px; 
+            margin: 20px;
+        }
+        a:hover{
+        background: rgb(211, 175, 121);
+        color: white;
+        transition: 0.2s;
+        width: 200px;
+        }
+        a.active{
+        background: rgb(211, 175, 121);
+        color: white;
+        }
+        .fixedbox {
+            position: relative;
+        }
+        .fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+        }
+        .content {
+            background-color: rgb(246, 240, 233);
+        }
+        hr {
+            height: 1.5px;
+            background-color: rgb(145, 145, 145);
+            border: none;
+        }
+        .blur-background {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .blur-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('ImageContent/backdrop.jpg'); 
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px); 
+            z-index: -1;
+        }
+        .about-heading {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.274);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <img class="logo" src="ImageContent/logo.jpg" alt="logo" width="130px"> 
+    <h1 class="brand">D I A L E K T O</h1>
+    <p class="tagline">Crafted in the Philippines</p>
+    <div id="fixedBox" class="fixedbox">
+        <ul>
+            <li><a href="homepage.html">HOME</a></li>
+            <li><a href="productsclassictotebag.html">PRODUCTS</a></li>
+            <li><a href="about.html" class="active">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="index.html">MAIN</a></li>
+        </ul>
+    </center>
+        <hr>
+    </div>
+    <div class="blur-background">
+        <div class="about-heading">About Us</div>
+        <div class="description">
+            Welcome to Dialekto, where tradition meets modernity in every stitch! We are a local clothing brand that celebrates the rich heritage of Filipino craftsmanship while embracing contemporary style. Our signature T-shirts feature intricately woven pockets inspired by traditional fabrics from various regions of the Philippines, weaving together stories of culture and heritage with every wear. Our collection include minimalistic tote bags crafted from durable canvas fabric, exuding sophistication with their classy colors and sleek designs.
+            At Dialekto, we strive to blend Filipino tradition with modern fashion sensibilities, creating timeless pieces that resonate with the spirit of our heritage while reflecting the dynamic lifestyles of today's fashion-forward individuals. Join us in celebrating Filipino tradition with a modern twist at Dialekto! Support Local. Support Dialekto.
+        </div>
+    </div>
+    <script>
+        window.onscroll = function() { myFunction() };
+        var fixedBox = document.getElementById("fixedBox");
+        var sticky = fixedBox.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                fixedBox.classList.add("fixed");
+            } else {
+                fixedBox.classList.remove("fixed");
+            }
+        }
+    </script>
+</body>
+</html>
